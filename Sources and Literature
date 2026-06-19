@@ -1,0 +1,71 @@
+# Source And Literature Scan Notes
+
+This is a representative scan, not an exhaustive archive of every Hall, ion,
+plasma, sail, and tether paper ever published. The field spans thousands of
+papers across AIAA, IEPC, NASA NTRS, ESA, JPL, Princeton, University of
+Michigan PEPL, and many national programs.
+
+## Equations Implemented
+
+- Momentum thrust: `F = mdot * ve`
+- Specific impulse: `Isp = ve / g0`
+- Power-limited electric propulsion: `F = 2 * eta * P / ve`
+- Rocket equation: `delta-v = ve * ln(m0 / m1)`
+- Electrostatic ion speed: `ve = sqrt(2 * Z * e * V / mi)`
+- Child-Langmuir current density estimate for gridded ion optics
+- Pulsed thruster energy: `E = 0.5 * C * V^2`
+- Pulsed average thrust: `F = impulse_bit * repetition_rate`
+- MPD self-field rough estimate using a Maecker-style geometry factor
+- Applied-field Lorentz thrust estimate: `F = I * B * L`
+- Solar sail pressure at 1 AU using the reflective-sail baseline
+- Photon sail force: `F = momentum_factor * eta * P / c`
+- Electrodynamic tether Lorentz force and motional EMF
+- Fusion fuel power and burn rate from reaction energy density
+- Direct-fusion jet-power closure using target exhaust velocity or entered mass
+  flow
+- Radiator sizing from Stefan-Boltzmann heat rejection
+- Pulsed fusion/nuclear-pulse average thrust and impulse-bit estimates
+
+## Representative Papers And Technical References
+
+- Dan M. Goebel and Ira Katz, *Fundamentals of Electric Propulsion: Ion and
+  Hall Thrusters*. Core reference for ion/Hall physics, ion acceleration,
+  losses, and efficiency accounting.
+- NASA / AEPS literature: Advanced Electric Propulsion System and HERMeS
+  Hall-thruster performance class, including NASA/TM-2018-219761.
+- NASA NSTAR and NEXT ion-thruster literature: Deep Space 1, Dawn, and NEXT
+  gridded-ion performance ranges.
+- Jacob Simmonds and Yevgeny Raitses, "Performance of Oscillating Plasma
+  Thrusters", arXiv:2002.09732.
+- Adam R. Patel, Yunping Zhang, and Alexey Shashurin, "Liquid-Fed Pulsed
+  Plasma Thruster for Propelling Nanosatellites", arXiv:1907.00169.
+- T. C. Underwood, W. Riedel, and M. A. Cappelli, "Dual Mode Operation of a
+  Hydromagnetic Plasma Thruster to Achieve Tunable Thrust and Specific
+  Impulse", arXiv:2103.14532.
+- Matthew Han and Hannah Rana, "Applied-Field Magnetoplasmadynamic Thrusters
+  for Deep Space Exploration", arXiv:2410.17478.
+- Ethan Kahn, "Electrospray Thruster Plume Impingement on CubeSat Solar
+  Arrays", arXiv:2510.05084.
+- Grover A. Swartzlander Jr., "Theory of Radiation Pressure on a Diffractive
+  Solar Sail", arXiv:2206.10052.
+- NASA / MSFC, *Tethers in Space Handbook*, for electrodynamic tether
+  fundamentals and mission concepts.
+- Direct Fusion Drive literature from Princeton Plasma Physics Laboratory /
+  Princeton Satellite Systems mission studies, including D-He3 fusion drive
+  assumptions.
+- NASA NIAC and university work on magneto-inertial fusion rockets and pulsed
+  fission-fusion propulsion concepts.
+- General antimatter propulsion estimates are included only as idealized energy
+  bookkeeping, not as a practical storage or engine design.
+
+## Design Warning
+
+This app is useful for first-pass sizing and comparison. It is not a
+flight-qualified design code. Real non-chemical propulsion work needs detailed
+plasma modeling, high-voltage design, erosion/lifetime modeling, thermal design,
+materials limits, plume impingement analysis, structural dynamics, attitude
+coupling, power processing, and trajectory optimization.
+
+The experimental/fusion tab is the most speculative part of the tool. It is
+intended to help compare orders of magnitude, radiator penalties, thrust/power
+tradeoffs, and mission mass sensitivity.
